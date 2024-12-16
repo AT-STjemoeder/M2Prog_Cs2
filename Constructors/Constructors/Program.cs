@@ -12,11 +12,11 @@ namespace Constructors
             {
             QuizVraag quizVraag = new QuizVraag("hier komt de vraag", "hier komt het antwoord");
             Quiz quiz = new Quiz(10);
-
+            quiz.VoegVraagToeOpIndex(0, quizVraag);
             }
-    }  
-    
-    
+    }
+
+   
     class QuizVraag
                 {
                     internal string vraag;
@@ -34,6 +34,10 @@ namespace Constructors
         {
             vragen[index] = vraag;
         }
+        void VoegVraagToeOpIndex(int index, string vraag, string antwoord)
+        {
+
+        }
         internal Quiz(int aantalVragen) 
         {
           vragen = new QuizVraag[aantalVragen];
@@ -43,7 +47,7 @@ namespace Constructors
     }
     class QuizVraagAntwoord
     {
-        internal QuizVraagAntwoord(QuizVraag vraag) 
+        internal QuizVraagAntwoord(QuizVraag vraag)
         {
             this .vraag = vraag;
             goed = false;
@@ -52,4 +56,5 @@ namespace Constructors
         internal bool goed;
     }
     
+
 }
